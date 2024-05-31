@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7104360590689595371
+--- !u!1 &8036558510699210106
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6024013527911808114}
-  - component: {fileID: 5300017422810703406}
-  - component: {fileID: 8198417252131877995}
-  - component: {fileID: 7196830240170540733}
+  - component: {fileID: 4373864454088883545}
+  - component: {fileID: 5387226035975293982}
+  - component: {fileID: 6028194569459341852}
+  - component: {fileID: 9020689346821055853}
   m_Layer: 5
-  m_Name: 4scendCentor
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!224 &6024013527911808114
+--- !u!224 &4373864454088883545
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104360590689595371}
+  m_GameObject: {fileID: 8036558510699210106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,24 +35,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 274.31}
-  m_SizeDelta: {x: 704.8966, y: 171.3853}
+  m_AnchoredPosition: {x: -200, y: 214}
+  m_SizeDelta: {x: 704.8966, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5300017422810703406
+--- !u!222 &5387226035975293982
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104360590689595371}
+  m_GameObject: {fileID: 8036558510699210106}
   m_CullTransparentMesh: 1
---- !u!114 &8198417252131877995
+--- !u!114 &6028194569459341852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104360590689595371}
+  m_GameObject: {fileID: 8036558510699210106}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -73,24 +73,24 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u3053\u3063\u3061\u3060\u3068\u65E5\u672C\u8A9E\u6253\u3066\u308B\nUI\u2192\u53E4\u3044\u6A5F\u80FD\u2192\u30C6\u30AD\u30B9\u30C8\n\u6B53\u58F0\u6A5F\u80FD\u306F\u3053\u308C\u3092\u30B3\u30D4\u30FC\u3057\u3066\u4F5C\u308B"
---- !u!114 &7196830240170540733
+--- !u!114 &9020689346821055853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104360590689595371}
+  m_GameObject: {fileID: 8036558510699210106}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a61d2b8f2faf58f43b4bba9a5c032b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setumei: "\uFF14\u79D2\u3067\u6D88\u3048\u3066\u771F\u3093\u4E2D\u306B\u62E1\u5927\u3059\u308B"
-  easeTime: 4
+  setumei: "\u4E0B\u306E\u79D2\u6570\u3067\u6D88\u3048\u3066\u5DE6\u306B\u62E1\u5927\u3059\u308B"
+  easeTime: 2

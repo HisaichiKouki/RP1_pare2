@@ -614,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 1575030871}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.46118, y: -26.841003, z: -4.534605}
+  m_LocalPosition: {x: 0, y: 0, z: -4.534605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -639,13 +639,16 @@ MonoBehaviour:
   - {fileID: 9140478073430585813, guid: b84965fa22249ef4e99ed077b3e41e89, type: 3}
   shoutTexts1:
   - "\u771F\u3093\u4E2D\u306B\u30C9\u30FC\u30F3\uFF01"
-  - "\u30C9\u30C9\u30F3\uFF01"
+  - "\u795E\u30D7\u30EC\u30A4\u304D\u305F\uFF01\uFF01"
+  - "\u305D\u306E\u653B\u3081\u30A2\u30C4\u30A4\uFF01\uFF01"
   shoutTexts2:
   - "\u5DE6\u4E0A\u306B\u30C9\u30FC\u30F3\uFF01"
-  - "\u3046\u304A\u304A\u304A"
+  - "\u3078\u305F\u304F\u305D\uFF01"
+  - "\u6575\u3092\u5012\u305B\uFF01"
   shoutTexts3:
   - "\u53F3\u4E0A\u306B\u30C9\u30FC\u30F3\uFF01"
   - "\u3084\u3063\u305F\u308C\uFF01"
+  - "HP\u304C\u30E4\u30D0\u3044..."
 --- !u!1 &1799310834
 GameObject:
   m_ObjectHideFlags: 0

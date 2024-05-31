@@ -9,7 +9,8 @@ public class ShoutManager : MonoBehaviour
     [Header("観客の声をここで管理する")]
     public GameObject canvas;//キャンバス
     [SerializeField, Header("どんなタイプのテキストか")] private GameObject[] shoutObj;
-    [SerializeField] private string[] shoutTexts1;
+
+    [SerializeField,Header("タイプごとのテキストの内容")] private string[] shoutTexts1;
     [SerializeField] private string[] shoutTexts2;
     [SerializeField] private string[] shoutTexts3;
 
