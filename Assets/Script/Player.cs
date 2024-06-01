@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private GameObject playerAnimeObj;
     private Animator playerAnime = null;
     private bool isYadoHold;
+    GameObject hitObj;
     GameObject holdObj;
 
     // Start is called before the first frame update
@@ -20,14 +21,15 @@ public class Player : MonoBehaviour
         playerRigidbody = gameObject.GetComponent<Rigidbody2D>();
         isYadoHold = false;
         playerAnimeObj = transform.GetChild(0).gameObject;
-        playerAnime=playerAnimeObj.GetComponent<Animator>();
+        playerAnime = playerAnimeObj.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        Hold();
+        HoldAndRelese();
+
         SetAnimator();
     }
 
@@ -35,12 +37,11 @@ public class Player : MonoBehaviour
     void Move()
     {
 
-       
+
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
 
-        Vector2 velocity = input* moveSpeed;
-        Debug.Log("vel=" + velocity);
+        Vector2 velocity = input * moveSpeed;
         playerRigidbody.velocity = velocity;
         if (velocity.x > 0)
         {
@@ -52,30 +53,67 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Hold()
+    void HoldAndRelese()
     {
-        //if(holdObj == null) { return; }
+
         if (Input.GetButtonDown("Jump"))
         {
-            Debug.Log("isYadoHold");
-            isYadoHold =!isYadoHold;
+            if (isYadoHold == false )
+            {
+                if (hitObj != null)
+                {
+                    if (hitObj.gameObject.tag == "Yado")
+                    {
+                        holdObj = hitObj;
+                        holdObj.GetComponent<YadoScript>().SetIsHold(true);
+                        isYadoHold = true;
+                        Debug.Log("isYadoHold");
+                    }
+                }
+               
+            }
+            else
+            {
+               
+                isYadoHold = false;
+                holdObj.GetComponent<YadoScript>().SetIsHold(false);
+                holdObj.transform.position = transform.position;
+                Debug.Log("isYadoRelese");
+            }
         }
+
+
     }
+
+ 
 
     void SetAnimator()
     {
         playerAnime.SetFloat("speed", input.magnitude);
         playerAnime.SetBool("isYadoHold", isYadoHold);
 
-        
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        holdObj = collision.gameObject;
+
     }
 
-    private void OnCollisionExit(Collision collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        holdObj = null;
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        hitObj = collision.gameObject;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        hitObj = null;
     }
 }
