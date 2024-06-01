@@ -49,7 +49,7 @@ public class ShoutManager : MonoBehaviour
             text.transform.SetParent(canvas.transform, false);
             text.transform.localScale = Vector3.zero;
         }
-        //if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             int rnd=UnityEngine.Random.Range(0, shoutTexts3.Length);
             GameObject text = Instantiate(shoutObj[2]);
